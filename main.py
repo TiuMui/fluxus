@@ -34,3 +34,8 @@ def recive_money(name: str, amount: int):
         'wallet': name,
         'new_balance': BALANCE[name]
     }
+
+
+@app.get('/wallets')
+def get_wallets_list():
+    return BALANCE
